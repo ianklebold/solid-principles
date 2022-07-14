@@ -1,4 +1,4 @@
-package com.principies.SRP;
+package com.principies.SRP.refactor;
 
 public class Player {
     Long id;
@@ -36,33 +36,6 @@ public class Player {
     }
     public void setDate(String date) {
         this.date = date;
-    }
-
-    public Double winPecentPlayer(Player player){
-        return Double.valueOf(player.getWin()/(player.getWin()+player.getLoss()));
-    }
-
-    public Double lossPecentPlayer(Player player){
-        return Double.valueOf(player.getLoss()/(player.getWin()+player.getLoss()));
-    }
-
-    public void savePlayer(Player player){
-        //Guarda el player
-    }
-
-
-    public void deletePlayer(Player player){
-        //Elimina el player
-    }
-    
-
-    public void updatePlayer(Player player){
-        //Actualiza el player
-    }
-
-
-    public void showPlayerHD(Player player){
-        //Elimina el player
     }
 
 }
