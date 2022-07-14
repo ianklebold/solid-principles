@@ -31,11 +31,31 @@ La cohesion es el grado entre los elementos de un modulo pertenecen juntos. Ante
 
 ## Principio de responsabilidad Unica - SRP :boom:
 
+Una clase debe tener una y solo una razón para cambiar, lo que significa es que una clase debe tener una sola responsabilidad. 
+
+### ¿Porque el codigo de ejemplo no cumple con SRP?
+No cumple con SRP porque la clase player tiene dentro una gran cantidad responsabilidades que nada tiene que ver con la clase en si. Por ejemplo si nos solicitan una nueva funcionalidad cargariamos de más responsabilidad a la clase y sería inmanejable. 
+
+Incluso, la clase player tiene metodos de save Player, delete PLayer, etc. Supongamos que estos metodos se conectan una base de datos NOSQL y por alguna razon ahora nos piden que cambiemos la base de datos a SQL, esto nos obliga a nosotros tener que cambiar todos estos metodos, haciendo muy dificil las modificaciones. Esto sin duda es más facil si decidimos asignar la responsabilidad solo a una clase que se encargue de la persistencia de datos de la clase Player.
+
+![image](https://user-images.githubusercontent.com/56406481/179014916-6f4a3b0a-5a0d-4e4b-ae6b-691e4f3447d6.png)
+
+Estos metodos no tienen ningun tipo de cohesión, por un lado tratamos el acceso a la BD e datos y por otro lado la logica de negocio de la estadistica del jugador. Si bien todos estos metodos estan relacionados al objeto Player, entre estos elementos no existe ningun tipo de relación. 
+
+Como vemos, rompe la definicion de SRP, que dice "Una clase debe tener una y solo una razón para cambiar" y como vemos si queremos podemos cambiar estos dos componentes (La logica de negocio y los metodos de persistencia de datos) siendo estas dos, dos razónes y no una sola para cambiar la clase Player. 
+
 ## Principio abierto cerrado - OCP :boom:
+
+### ¿Porque el codigo de ejemplo no cumple con OCP?
 
 ## Substitucion de Liskov - LSP :boom:
 
+### ¿Porque el codigo de ejemplo no cumple con LSP?
+
 ## Principio de segregación de interfaces - ISP :boom:
+
+### ¿Porque el codigo de ejemplo no cumple con ISP?
 
 ## Principio de inversión de dependencias - DIP :boom:
 
+### ¿Porque el codigo de ejemplo no cumple con DIP?
