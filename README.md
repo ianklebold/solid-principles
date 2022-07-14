@@ -63,6 +63,12 @@ Abstracciones (Clases abstractas) e interfaces
 
 ### ¿Porque el codigo de ejemplo no cumple con OCP?
 
+En nuestro caso tenemos un DiscountManager que es una clase que implementa o "maneja" los distintos descuentos, esta clase debe de ser intocable en cuanto al codigo (Cerrado) pero abiertoa permitir añadir nuevas funcionalidades en este caso añadir más cupones de descuento. ¿Como podemos hacer esto? A partir de interfaces, donde definimos las funcionalidades que DiscountManager.
+
+Lo que haremos será crear una abstraccion, esto puede ser a partir de clases abstractas o a partir de interfaces, luego a cada cupon de descuento extenderá esa interfaz e implementará su propio descuento. DiscountManager lo unico que tendrá que tener es un solo metodo, donde este tendrá como parametro el precio del producto y la clase que extienda la interfaz Discount.
+
+![image](https://user-images.githubusercontent.com/56406481/179097886-7b9bc303-0edf-4e01-9d19-b7b4f058284f.png)
+
 
 ## Substitucion de Liskov - LSP :boom:
 
