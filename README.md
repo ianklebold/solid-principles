@@ -12,10 +12,12 @@ El orden de SOLID no importa, los 5 tienen igual importancia. Fue creado por Rob
 
 Razones de aplicar SOLID : 
 
---> Calidad de software
---> Software de mayor eficaz
---> Codigo reutilizable y mantenible en el tiempo
---> Codigo escalable, es decir, con mayor facilidad de añadir funcionalidades nuevas
+```
+- Calidad de software
+- Software de mayor eficaz
+- Codigo reutilizable y mantenible en el tiempo
+- Codigo escalable, es decir, con mayor facilidad de añadir funcionalidades nuevas  
+```
 
 SOLID es indispensable para crear aplicaciones robustas y de bajo acoplamiento.
 
