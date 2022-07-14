@@ -53,8 +53,16 @@ Lo que podemos hacer es crear más clases, por ejemplo clase de presentacion del
 
 
 ## Principio abierto cerrado - OCP :boom:
+Las clases que utilicemos deben estar abiertas o extendidas para ampliar su comportamiento y cerradas a la hora de modificarse. Cerrado a la modificacion quiere decir que las nuevas funcionalidades que añadiremos no debe modificar el codigo que ya existe y al mismo tiempo abierto a la extension, es decir, abierto a ampliar su comportamiento y funcionalidades. 
+
+Este principio facilita a la hora de añadir nuevas funcionalidades en nuestra aplicación, seguir estos principios nos ahorra una gran cantidad de bugs. Este principio pretende que cada vez que añadas una funcionalidad, no modifiques el codigo que ya existe y funciona porque podrías perjudicar al funcionamiento que tenia el software. 
+
+¿Cuales son las soluciones que se recomiendan? 
+Abstracciones (Clases abstractas) e interfaces
+
 
 ### ¿Porque el codigo de ejemplo no cumple con OCP?
+
 
 ## Substitucion de Liskov - LSP :boom:
 
