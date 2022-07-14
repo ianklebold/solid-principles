@@ -14,3 +14,13 @@ Aquí presentamos teoria de este principio. En cada rama encontrarás el codigo 
 ### COHESIÓN
 
 
+## Principio de responsabilidad Unica - SRP :boom:
+
+## Principio abierto cerrado - OCP :boom:
+
+## Substitucion de Liskov - LSP :boom:
+
+## Principio de segregación de interfaces - ISP :boom:
+
+## Principio de inversión de dependencias - DIP :boom:
+
