@@ -80,7 +80,11 @@ Nunca debemos alterar la clase padre al extenderla a una clase hija.
 ### ¿Porque el codigo de ejemplo no cumple con LSP?
 
 Si ejecutamos este codigo
+
+
 ![image](https://user-images.githubusercontent.com/56406481/179149026-b867c9b0-331a-475a-b2ab-699a89d4ab3e.png)
+
+
 
 Nos genera un error, obviamente porque hay canchas de tenis en donde no se debe de cortar el cesped sin embargo esto no deberia perjudicar a otros objetos que si pueden, es decir, estas clases que generan la excepcion nisiquiera deberian de heredar este metodo de "cut grass", hay una mala implementación la herencia, un mal diseño de la clase padre.
 
