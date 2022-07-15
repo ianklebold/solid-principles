@@ -85,7 +85,14 @@ Si ejecutamos este codigo
 Nos genera un error, obviamente porque hay canchas de tenis en donde no se debe de cortar el cesped sin embargo esto no deberia perjudicar a otros objetos que si pueden, es decir, estas clases que generan la excepcion nisiquiera deberian de heredar este metodo de "cut grass", hay una mala implementación la herencia, un mal diseño de la clase padre.
 
 Observemos que la clase padre Court implementa estos metodos y atributos: 
+
 ![image](https://user-images.githubusercontent.com/56406481/179149366-e9dcefb0-4602-4964-8d4e-35c5742c6e1f.png)
+
+
+
+
+
+
 
 
 Las clases hijas : 
