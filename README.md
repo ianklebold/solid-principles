@@ -180,28 +180,19 @@ La clase factory puede devolver la clase de bajo nivel especifica que requiere l
 Entonces La clase de alto nivel colabora con la clase de bajo nivel y utiliza el factory, donde el factory se encarga de implementar lo que necesite para devolverle un UserRepository que esta clase de alto nivel requiere. 
 
 
+Hoy por hoy tenemos frameworks que nos ayudan a aplicar esta inversion de dependencias a partir de lo que se conoce como Inversion de control, donde en lugar nosotros hacer todo este trabajo, el framework se encarga de tener control e impementar las clases que necesitemos.
+
+
 ![image](https://user-images.githubusercontent.com/56406481/179296211-aede8283-4fa2-48d5-8af4-f5f53d4bc6d6.png)
 
 
 Clases de bajo nivel
+
+
 ![image](https://user-images.githubusercontent.com/56406481/179296242-71b10840-b5e6-4d7e-8843-a0fa04a3dc26.png)
 ![image](https://user-images.githubusercontent.com/56406481/179296283-e45499b3-ae9d-4e78-a12e-ce76ccd93aa0.png)
 
 
 Clase de alto nivel, colaborando con factory y factory le devuelve la clase de bajo nivel que necesita
 ![image](https://user-images.githubusercontent.com/56406481/179296317-bb11e507-a52a-4ee0-9e82-89a11bfdb5f6.png)
-
-
-
-
-
-## Conclusion
-
-
-
-
-
-
-
-
 
