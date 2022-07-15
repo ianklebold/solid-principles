@@ -156,6 +156,13 @@ Por ejemplo Payment es una interfaz que contiene la firma de un metodo que es ut
 
 ## Principio de inversión de dependencias - DIP :boom:
 
+1. Las clases de alto nivel no deberian depender de las clases de bajo nivel
+2. Las abstracciones no deberian depender de los detalles, los detalles si deben depender de las abstracciones. 
+
+Lo que buscamos es que el nucleo del codigo, o la importancia del mismo no este en la implementac
+
+
+
 ### ¿Porque el codigo de ejemplo no cumple con DIP?
 
 
