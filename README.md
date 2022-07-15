@@ -118,12 +118,41 @@ Como vemos en esa imagen, ya no deja poner en una lista a una clase que no compr
 
 ## Principio de segregación de interfaces - ISP :boom:
 
+Basicamente nos dice que ninguna clase debe de implementar metodos que no usa. Es mejor una interfaz especifica que una interfaz de proposito general. 
+Este principio ofrece dos ventajas, sistemas desacoplados y codigo sencillo de rafactorizar. 
 
+¿Como detectamos el incumplimiento de este principio?   
 
+```
+- Generalmente cuando nos encontramos con interfaces con un gran numero de definiciones de metodos, es mas que probable que la clase que lo implementa no utilice todos sus metodos.
+
+- Otra forma es encontrarnos con metodos poco cohesivos en la interfaz, es decir, metodos que tienen poca relación, por ejemplo un metodo se encarga de mapear un objeto y el otro es una logica de negocio, son dos cosas distintas que es mejor separarlas.
+
+- Otra es encontrar metodos vacios dentro de las clases que implementan estas interfaces, es decir, estos metodos no son utilizados. 
+
+```
 
 ### ¿Porque el codigo de ejemplo no cumple con ISP?
 
+Payment es perfectamente lo que se denomina "Interfaz de proposito general" es una muy mala practica, porque estamos acumulando firma de metodos que otras clases jamás la implementarán. Por ejemplo BankTransfer jamás implementará los pagos por tarjeta o por efectivo.
+
+![image](https://user-images.githubusercontent.com/56406481/179155127-83d36287-b48b-49a7-8750-dfb443ed0ec1.png)
+
+
+![image](https://user-images.githubusercontent.com/56406481/179155169-08c761fd-f05f-418a-8983-e345a547dc84.png)
+
+
 ### ¿Como solucionar este problema?
+La solución es sencillamente tener interfaces especificas, en lugar de interfaces de proposito general. Sin embargo, podrias tener interfaces de proposito general siempre y cuando utilices, en todas las clases que la implementen, todos los metodos firmados en la interfaz.
+
+![image](https://user-images.githubusercontent.com/56406481/179156515-e70abec4-1295-466b-b1e8-8cba7db3f0b4.png)
+
+
+Por ejemplo Payment es una interfaz que contiene la firma de un metodo que es utilizada por todas las clases, por lo que podemos extender desde las interfaces especificas hacia la interfaz general que es Payment, entonces cada clase que implementa las interfaces especificas deberán implementar el metodo que es comun por todas las clases. 
+
+
+![image](https://user-images.githubusercontent.com/56406481/179156739-1692caff-29f6-42b1-8ecb-05acbc49a3a0.png)
+
 
 ## Principio de inversión de dependencias - DIP :boom:
 
