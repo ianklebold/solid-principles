@@ -156,7 +156,43 @@ Por ejemplo Payment es una interfaz que contiene la firma de un metodo que es ut
 
 ## Principio de inversión de dependencias - DIP :boom:
 
+1. Las clases de alto nivel no deberian depender de las clases de bajo nivel
+2. Las abstracciones no deberian depender de los detalles, los detalles si deben depender de las abstracciones. 
+
+Lo que buscamos es que el nucleo del codigo, o la importancia del mismo no este en la implementacion.
+
+
 ### ¿Porque el codigo de ejemplo no cumple con DIP?
+Lo que tenemos es un fuerte acoplamiento entre UserService y UserRepository, donde UserService (Clase de alto nivel) depende de UserRepository(Clase de bajo nivel), esto como dijimos debemos de evitarlo.
+
+![image](https://user-images.githubusercontent.com/56406481/179289967-4a4f283b-fc2f-4cc3-9864-1493f614747a.png)
+
+Esto implica, que imaginemos que ahora Repository cambia la forma de implementarse, por ejemplo ahora requiere de un parametro para que funcione, esto ocaciona que estemos cambiando la clase de alto nivel (Service) para que la implementación funcione.
 
 
 ### ¿Como solucionar este problema?
+
+Precisamente este acoplamiento se soluciona con abstracciones, en lugar de que la clase de alto nivel interactue directamente con la clase de bajo nivel añadimos un intermediario, una interfaz para que el servicio interactue desde ahi con la/s clase/s de bajo nivel.
+
+Creamos una clase (Factory) que es la encargada de crear por nosotros la clase de bajo nivel, dejando que la clase de alto nivel se olvide de ello.
+La clase factory puede devolver la clase de bajo nivel especifica que requiere la clase de alto nivel, siempre que esta clase de bajo nivel especifica implemente la clase de bajo nivel. En nuestro caso, LocalUserRepository (Clase de bajo nivel especifica) implementa UserRepository (Clase de bajo nivel). 
+
+Entonces La clase de alto nivel colabora con la clase de bajo nivel y utiliza el factory, donde el factory se encarga de implementar lo que necesite para devolverle un UserRepository que esta clase de alto nivel requiere. 
+
+
+Hoy por hoy tenemos frameworks que nos ayudan a aplicar esta inversion de dependencias a partir de lo que se conoce como Inversion de control, donde en lugar nosotros hacer todo este trabajo, el framework se encarga de tener control e impementar las clases que necesitemos.
+
+
+![image](https://user-images.githubusercontent.com/56406481/179296211-aede8283-4fa2-48d5-8af4-f5f53d4bc6d6.png)
+
+
+Clases de bajo nivel
+
+
+![image](https://user-images.githubusercontent.com/56406481/179296242-71b10840-b5e6-4d7e-8843-a0fa04a3dc26.png)
+![image](https://user-images.githubusercontent.com/56406481/179296283-e45499b3-ae9d-4e78-a12e-ce76ccd93aa0.png)
+
+
+Clase de alto nivel, colaborando con factory y factory le devuelve la clase de bajo nivel que necesita
+![image](https://user-images.githubusercontent.com/56406481/179296317-bb11e507-a52a-4ee0-9e82-89a11bfdb5f6.png)
+
