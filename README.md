@@ -57,7 +57,7 @@ Las clases que utilicemos deben estar abiertas o extendidas para ampliar su comp
 
 Este principio facilita a la hora de añadir nuevas funcionalidades en nuestra aplicación, seguir estos principios nos ahorra una gran cantidad de bugs. Este principio pretende que cada vez que añadas una funcionalidad, no modifiques el codigo que ya existe y funciona porque podrías perjudicar al funcionamiento que tenia el software. 
 
-¿Cuales son las soluciones que se recomiendan? 
+### ¿Como solucionar este problema?
 Abstracciones (Clases abstractas) e interfaces
 
 
@@ -72,12 +72,51 @@ Lo que haremos será crear una abstraccion, esto puede ser a partir de clases ab
 
 ## Substitucion de Liskov - LSP :boom:
 
+Las clases derivadas deben ser subtituibles por sus clases bases. Este principio nos dicen que si una clase hereda de otra, podemos (Y debemos) utilizar cualquiera de las clases hijas en representación de la clase padre, por ejemplo si una clase Ser humano hereda de la clase Ser vivo, Ser humano puede reemplazar a Ser vivo en cualquier metodo que se requiera como parametro a Ser vivo. 
+
+Nunca debemos alterar la clase padre al extenderla a una clase hija. 
+
+
 ### ¿Porque el codigo de ejemplo no cumple con LSP?
+
+Si ejecutamos este codigo
+![image](https://user-images.githubusercontent.com/56406481/179149026-b867c9b0-331a-475a-b2ab-699a89d4ab3e.png)
+
+Nos genera un error, obviamente porque hay canchas de tenis en donde no se debe de cortar el cesped sin embargo esto no deberia perjudicar a otros objetos que si pueden, es decir, estas clases que generan la excepcion nisiquiera deberian de heredar este metodo de "cut grass", hay una mala implementación la herencia, un mal diseño de la clase padre.
+
+Observemos que la clase padre Court implementa estos metodos y atributos: 
+![image](https://user-images.githubusercontent.com/56406481/179149366-e9dcefb0-4602-4964-8d4e-35c5742c6e1f.png)
+
+
+Las clases hijas : 
+
+![image](https://user-images.githubusercontent.com/56406481/179149403-bcba24dc-3d3b-4fdc-8eab-70cffd59a2ff.png)
+![image](https://user-images.githubusercontent.com/56406481/179149431-c2411885-0830-427d-a01e-50d49350923a.png)
+![image](https://user-images.githubusercontent.com/56406481/179149452-811b120b-713b-457b-aeda-2cc2eaaffc4b.png)
+
+### ¿Como solucionar este problema?
+
+La solución es eliminar el atributo grass y metodo cutgrass de la clase padre. Crear interfaces para cada tipo de Court donde en cada interfaz se firme con el metodo correspondiente a la cancha (Cortar, limpiar, etc), entonces cada cancha hereda de la clase padre los atributos que son comunes a cada cancha y a su vez implementen la interfaz que le corresponde. 
+
+
+![image](https://user-images.githubusercontent.com/56406481/179150417-f95012ef-ffea-4930-85ad-d0cc51cc38c4.png)
+
+![image](https://user-images.githubusercontent.com/56406481/179150630-51bf4776-a4d6-4a10-87cd-eb528bbb4f94.png)
+
+Como vemos en esa imagen, ya no deja poner en una lista a una clase que no comprende la impleementación comun entre las otras clases hijas.
 
 ## Principio de segregación de interfaces - ISP :boom:
 
+
+
+
 ### ¿Porque el codigo de ejemplo no cumple con ISP?
+
+### ¿Como solucionar este problema?
 
 ## Principio de inversión de dependencias - DIP :boom:
 
 ### ¿Porque el codigo de ejemplo no cumple con DIP?
+
+
+### ¿Como solucionar este problema?
