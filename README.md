@@ -8,7 +8,7 @@ Aquí presentamos teoria de este principio. En cada rama encontrarás el codigo 
 ## Iniciemos :boom:
 
 ### INTRODUCCION 
-El orden de SOLID no importa, los 5 tienen igual importancia. Fue creado por Rober Martin. Son indepenendientes de cualquier lenguaje. Aplicando estos principios obtenemos un software que será más facil de mantener y modificar con el tiempo. 
+El orden de SOLID no importa, los 5 tienen igual importancia. Fue presentado por Robert C Martin. Son indepenendientes de cualquier lenguaje. Aplicando estos principios obtenemos un software que será más facil de mantener y modificar con el tiempo. De estos 5 principios, 2 no pertenecen a Robert C Martin, El principio de Liskov fue desarrollado y demostrado por Barbara Liskov y El principio de abierto/cerrado el cual fue creado por Bertrand Meyer.
 
 Razones de aplicar SOLID : 
 
